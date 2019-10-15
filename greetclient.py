@@ -2,7 +2,7 @@ import Pyro4
 
 
 def setupClient():
-    uri = "PYRONAME:greetserver@localhost:8909"
+    uri = "PYRONAME:greetserver@localhost:7777"
     Greeserver = Pyro4.Proxy(uri)
 
     while True:
@@ -16,7 +16,7 @@ def setupClient():
             Greeserver.update(inputs[1], inputs[2])
         elif command == 'delete':
             Greeserver.delete(inputs[1])
-         elif command == 'list':
+        elif command == 'list':
              Greeserver.list()
 
 
