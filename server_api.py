@@ -8,8 +8,8 @@ class GServers:
 
     def read(self, filename):
         fd = open(filename, 'r')
-        for isi in fd:
-            print(isi)
+        for data in fd:
+            print(data)
         fd.close()
 
     def update(self, filename, text):
